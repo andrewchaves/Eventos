@@ -1,0 +1,6 @@
+framework module Pods_Eventos {
+  umbrella header "Pods-Eventos-umbrella.h"
+
+  export *
+  module * { export * }
+}
