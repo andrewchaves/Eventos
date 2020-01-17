@@ -13,6 +13,7 @@ struct Event: Decodable {
     
     let id: String
     let title: String
+    let description:String
     let price: Double
     let image: String
     let date: TimeInterval

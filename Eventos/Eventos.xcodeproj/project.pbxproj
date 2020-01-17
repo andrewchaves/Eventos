@@ -17,6 +17,7 @@
 		4A6BDDFA23D2147F0038AC3A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDF923D2147F0038AC3A /* EventsTableViewController.swift */; };
 		4A6BDDFC23D215280038AC3A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDFB23D215280038AC3A /* WebService.swift */; };
 		4A6BDDFF23D218860038AC3A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDFE23D218860038AC3A /* Event.swift */; };
+		4A6BDE0223D22A9B0038AC3A /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDE0123D22A9B0038AC3A /* EventViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4A6BDDF923D2147F0038AC3A /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		4A6BDDFB23D215280038AC3A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		4A6BDDFE23D218860038AC3A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		4A6BDE0123D22A9B0038AC3A /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		4A6BDDC623D20FB60038AC3A /* Eventos */ = {
 			isa = PBXGroup;
 			children = (
+				4A6BDE0023D229480038AC3A /* View Models */,
 				4A6BDDFD23D218320038AC3A /* Models */,
 				4A6BDDF823D214490038AC3A /* Services */,
 				4A6BDDF723D214390038AC3A /* Controllers */,
@@ -156,6 +159,14 @@
 				4A6BDDFE23D218860038AC3A /* Event.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4A6BDE0023D229480038AC3A /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A6BDE0123D22A9B0038AC3A /* EventViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6BDDC823D20FB60038AC3A /* AppDelegate.swift in Sources */,
+				4A6BDE0223D22A9B0038AC3A /* EventViewModel.swift in Sources */,
 				4A6BDDCA23D20FB60038AC3A /* SceneDelegate.swift in Sources */,
 				4A6BDDFC23D215280038AC3A /* WebService.swift in Sources */,
 				4A6BDDFA23D2147F0038AC3A /* EventsTableViewController.swift in Sources */,
