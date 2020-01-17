@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct EventViewModel {
-    private let event: Event
+    let event: Event
 }
 
 extension EventViewModel {
@@ -54,10 +54,9 @@ extension EventViewModel {
     
     func getDate() -> String {
         
-        let date = Date(timeIntervalSince1970: event.date)
+        let date = Date(timeIntervalSince1970: event.date / 1000)
         let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = DateFormatter.Style.medium
-        dateFormatter.dateStyle = DateFormatter.Style.medium
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         dateFormatter.timeZone = .current
         return dateFormatter.string(from: date)
         

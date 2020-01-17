@@ -11,6 +11,8 @@ import UIKit
 
 class EventsTableViewController: UITableViewController {
     
+    private var eventsListVM = [EventViewModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadEvents()
@@ -26,7 +28,13 @@ class EventsTableViewController: UITableViewController {
             
             switch result {
                 case .success(let events):
-                    print(events)
+                    for event in events {
+                        print("Model: \(event.date)")
+                        self.eventsListVM.append(EventViewModel(event: event))
+                    }
+                    for eventvm in self.eventsListVM {
+                        print("View Model: \(eventvm.getDate())")
+                    }
                 case .failure(let error):
                     print(error)
             }
