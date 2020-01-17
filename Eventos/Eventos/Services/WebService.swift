@@ -14,21 +14,17 @@ enum NetworkError: Error {
     case urlError
 }
 
-struct Resource<T:Codable> {
-    let url: URL
-}
-
 class WebService {
-    func load<T>(resource: Resource<T>, completion: @escaping (Result<T, NetworkError>) -> Void){
+    func loadEvents(url: URL, completion: @escaping (Result<[Event], NetworkError>) -> Void){
         
-        URLSession.shared.dataTask(with: resource.url) { data, response, error in
+        URLSession.shared.dataTask(with: url) { data, response, error in
             
             guard let _ = data, error == nil else {
                 completion(.failure(.domainError))
                 return
             }
-            
-            let result = try? JSONDecoder().decode(T.self, from: data!)
+            print(data as Any)
+            let result = try? JSONDecoder().decode([Event].self, from: data!)
             if let result = result {
                 DispatchQueue.main.async {
                     completion(.success(result))
