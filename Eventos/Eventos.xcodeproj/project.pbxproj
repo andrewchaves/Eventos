@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,7 @@
 		4A6BDDD423D20FB80038AC3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6BDDD223D20FB80038AC3A /* LaunchScreen.storyboard */; };
 		4A6BDDDF23D20FB80038AC3A /* EventosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDDE23D20FB80038AC3A /* EventosTests.swift */; };
 		4A6BDDEA23D20FB80038AC3A /* EventosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDE923D20FB80038AC3A /* EventosUITests.swift */; };
-		4A6BDDFA23D2147F0038AC3A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDF923D2147F0038AC3A /* EventsTableViewController.swift */; };
+		4A6BDDFA23D2147F0038AC3A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDF923D2147F0038AC3A /* EventsViewController.swift */; };
 		4A6BDDFC23D215280038AC3A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDFB23D215280038AC3A /* WebService.swift */; };
 		4A6BDDFF23D218860038AC3A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDFE23D218860038AC3A /* Event.swift */; };
 		4A6BDE0223D22A9B0038AC3A /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDE0123D22A9B0038AC3A /* EventViewModel.swift */; };
@@ -56,7 +56,7 @@
 		4A6BDDE523D20FB80038AC3A /* EventosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6BDDE923D20FB80038AC3A /* EventosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosUITests.swift; sourceTree = "<group>"; };
 		4A6BDDEB23D20FB80038AC3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A6BDDF923D2147F0038AC3A /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		4A6BDDF923D2147F0038AC3A /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		4A6BDDFB23D215280038AC3A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		4A6BDDFE23D218860038AC3A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		4A6BDE0123D22A9B0038AC3A /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
@@ -109,7 +109,6 @@
 				4EDF96C4A54A58CBD30D63EF /* Pods-EventosTests.debug.xcconfig */,
 				6BB1940F2D087B3B09455DEE /* Pods-EventosTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -184,7 +183,7 @@
 		4A6BDDF723D214390038AC3A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4A6BDDF923D2147F0038AC3A /* EventsTableViewController.swift */,
+				4A6BDDF923D2147F0038AC3A /* EventsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -465,7 +464,7 @@
 				4A6BDDCA23D20FB60038AC3A /* SceneDelegate.swift in Sources */,
 				4A6BDDFC23D215280038AC3A /* WebService.swift in Sources */,
 				4A6BDE0523D23BF70038AC3A /* EventTableViewCell.swift in Sources */,
-				4A6BDDFA23D2147F0038AC3A /* EventsTableViewController.swift in Sources */,
+				4A6BDDFA23D2147F0038AC3A /* EventsViewController.swift in Sources */,
 				4A6BDDFF23D218860038AC3A /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
