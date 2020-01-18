@@ -60,11 +60,25 @@ class EventsViewController: UIViewController, UITableViewDelegate {
         activityIndicator.stopAnimating()
         
         self.eventsListVM.asObservable().bind(to: eventsTableView.rx.items(cellIdentifier: "cellId", cellType: EventTableViewCell.self)) { row, model, cell in
-
-                       cell.eventTitleLabel.text = model.getTitle()
-                       cell.eventDateLabel.text = model.getDate()
-                       cell.eventPriceLabel.text = model.getPrice()
+            
+            if (row % 2 != 0 ) {
+                cell.backgroundColor = UIColor(displayP3Red: 244.0/255.0, green: 244.0/255.0, blue: 244.0/255.0, alpha: 0.8)
+            } else {
+                cell.backgroundColor = UIColor(displayP3Red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.8)
+            }
+            
+            cell.eventImageView.image = model.getImage()
+            cell.eventTitleLabel.text = model.getTitle()
+            cell.eventDateLabel.text = model.getDate()
+            cell.eventPriceLabel.text = model.getPrice()
+            
         }.disposed(by: disposeBag)
+        
+        
+        eventsTableView.rx.modelSelected(EventViewModel.self).subscribe(onNext:  { value in
+            
+        })
+        .disposed(by: disposeBag)
         
     }
     

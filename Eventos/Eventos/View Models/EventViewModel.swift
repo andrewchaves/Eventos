@@ -48,7 +48,7 @@ extension EventViewModel {
            }
         }
         
-        return UIImage()
+        return UIImage(named: "image-placeholder")!
         
     }
     
