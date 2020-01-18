@@ -33,11 +33,7 @@ class EventsViewController: UIViewController, UITableViewDelegate {
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
         
-        guard let eventsURL = URL(string: "http://5b840ba5db24a100142dcd8c.mockapi.io/api/events?fbclid=IwAR0Ll0IuRnyQk4a-KBwi1JZDoxvUeilJEB0rJPsu5VRPK278NVC4LhWdhaQ") else {
-            fatalError("URL incorrect.")
-        }
-        
-        WebService().loadEvents(url: eventsURL) { result in
+        WebService().loadEvents() { result in
             
             switch result {
                 case .success(let events):
@@ -61,16 +57,7 @@ class EventsViewController: UIViewController, UITableViewDelegate {
         
         self.eventsListVM.asObservable().bind(to: eventsTableView.rx.items(cellIdentifier: "cellId", cellType: EventTableViewCell.self)) { row, model, cell in
             
-            if (row % 2 != 0 ) {
-                cell.backgroundColor = UIColor(displayP3Red: 244.0/255.0, green: 244.0/255.0, blue: 244.0/255.0, alpha: 0.8)
-            } else {
-                cell.backgroundColor = UIColor(displayP3Red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.8)
-            }
-            
-            cell.eventImageView.image = model.getImage()
-            cell.eventTitleLabel.text = model.getTitle()
-            cell.eventDateLabel.text = model.getDate()
-            cell.eventPriceLabel.text = model.getPrice()
+            cell.setupCell(eventVM: model, row: row)
             
         }.disposed(by: disposeBag)
         

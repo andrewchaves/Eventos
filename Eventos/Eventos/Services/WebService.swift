@@ -15,9 +15,13 @@ enum NetworkError: Error {
 }
 
 class WebService {
-    func loadEvents(url: URL, completion: @escaping (Result<[Event], NetworkError>) -> Void){
+    func loadEvents( completion: @escaping (Result<[Event], NetworkError>) -> Void){
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        guard let eventsURL = URL(string: "http://5b840ba5db24a100142dcd8c.mockapi.io/api/events?fbclid=IwAR0Ll0IuRnyQk4a-KBwi1JZDoxvUeilJEB0rJPsu5VRPK278NVC4LhWdhaQ") else {
+            fatalError("URL incorrect.")
+        }
+        
+        URLSession.shared.dataTask(with: eventsURL) { data, response, error in
             
             guard let _ = data, error == nil else {
                 completion(.failure(.domainError))
