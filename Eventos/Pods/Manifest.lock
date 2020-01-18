@@ -5,22 +5,26 @@ PODS:
   - RxRelay (5.0.1):
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
+  - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: c7823958ea4a9b45a4f0b91a461d11a24ad50e46
+PODFILE CHECKSUM: 89f34072ee14bae518044f9f55496266aff407ca
 
 COCOAPODS: 1.8.4

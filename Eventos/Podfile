@@ -8,6 +8,7 @@ target 'Eventos' do
   # Pods for Eventos
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'Toast-Swift', '~> 5.0.1'
 
   target 'EventosTests' do
     inherit! :search_paths

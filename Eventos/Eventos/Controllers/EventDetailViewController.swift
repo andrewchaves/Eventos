@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Toast_Swift
 
 class EventDetailViewController: UIViewController {
     
@@ -49,7 +50,9 @@ class EventDetailViewController: UIViewController {
         }.disposed(by: disposeBag)
         
         eventShareButton.rx.tap.bind {
-            print("Share tapped")
+             DispatchQueue.main.async {
+                self.view.makeToast("Compartilhe bons eventos.", duration: 2.0, position: .center)
+            }
         }.disposed(by: disposeBag)
         
         okButton.rx.tap.bind {
@@ -66,6 +69,7 @@ class EventDetailViewController: UIViewController {
     }
     
     private func makeCheckIn() {
+        
         if self.nameTextField.text != "" && self.eMailTextField.text  != "" {
             
             let name = self.nameTextField.text!
@@ -74,18 +78,27 @@ class EventDetailViewController: UIViewController {
             WebService().checkIn(name: name, email: email, eventId: self.eventVM.getId()) { result in
 
                switch result {
-                   case .success(let response):
-                       print(response)
-                   case .failure(let error):
-                       print(error)
+                    case .success(_):
+                        
+                        DispatchQueue.main.async {
+                            self.view.makeToast("CheckIn realizado!", duration: 2.0, position: .center)
+                            self.dissmissPopUp()
+                        }
+                       
+                    case .failure(_):
+                        DispatchQueue.main.async {
+                            self.view.makeToast("Erro ao fazer checkIn", duration: 2.0, position: .center)
+                        }
                }
             }
+            
         } else {
             
             self.feedbackLabel.text = "Preencha todos os campos!"
             self.feedbackLabel.textColor = UIColor.red
             
         }
+        
     }
     
     private func dissmissPopUp() {
