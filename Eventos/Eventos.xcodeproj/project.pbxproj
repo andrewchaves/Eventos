@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		170CA7346E0DAA4DF3AEEF1E /* Pods_EventosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CD76363ADFCE717E1EE627 /* Pods_EventosTests.framework */; };
+		4A2189A423D376800024CCBA /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2189A323D376800024CCBA /* EventDetailViewController.swift */; };
 		4A6BDDC823D20FB60038AC3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDC723D20FB60038AC3A /* AppDelegate.swift */; };
 		4A6BDDCA23D20FB60038AC3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDC923D20FB60038AC3A /* SceneDelegate.swift */; };
 		4A6BDDCF23D20FB60038AC3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6BDDCD23D20FB60038AC3A /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		222E86C1B0FE78BD55BF337A /* Pods-Eventos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos.release.xcconfig"; path = "Target Support Files/Pods-Eventos/Pods-Eventos.release.xcconfig"; sourceTree = "<group>"; };
+		4A2189A323D376800024CCBA /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		4A6BDDC423D20FB60038AC3A /* Eventos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6BDDC723D20FB60038AC3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A6BDDC923D20FB60038AC3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				4A6BDDF923D2147F0038AC3A /* EventsViewController.swift */,
+				4A2189A323D376800024CCBA /* EventDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				4A6BDDFC23D215280038AC3A /* WebService.swift in Sources */,
 				4A6BDE0523D23BF70038AC3A /* EventTableViewCell.swift in Sources */,
 				4A6BDDFA23D2147F0038AC3A /* EventsViewController.swift in Sources */,
+				4A2189A423D376800024CCBA /* EventDetailViewController.swift in Sources */,
 				4A6BDDFF23D218860038AC3A /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,7 @@ class EventsViewController: UIViewController, UITableViewDelegate {
     
     let disposeBag = DisposeBag()
     private var eventsListVM: BehaviorRelay<[EventViewModel]> = BehaviorRelay(value: [])
-
+    private var selectedEventVM: EventViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,15 +76,29 @@ class EventsViewController: UIViewController, UITableViewDelegate {
         
         
         eventsTableView.rx.modelSelected(EventViewModel.self).subscribe(onNext:  { value in
-            
-        })
-        .disposed(by: disposeBag)
+            self.selectedEventVM = value
+            self.performSegue(withIdentifier: "toDetail", sender: nil)
+        }).disposed(by: disposeBag)
+        
         
     }
     
-    // MARK :- TableView delegate methods
+    // MARK: - TableView delegate methods
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return 380
+        
     }
+    
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if let destinationVC = segue.destination as? EventDetailViewController {
+            destinationVC.eventVM = selectedEventVM
+        }
+        
+    }
+      
 }
