@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Toast_Swift
+import Social
 
 class EventDetailViewController: UIViewController {
     
@@ -18,7 +19,8 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var eventDescriptionTextView: UITextView!
     @IBOutlet weak var eventCheckinButton: UIButton!
     @IBOutlet weak var eventShareButton: UIButton!
-    
+    @IBOutlet weak var eventDateLabel: UILabel!
+    @IBOutlet weak var eventPriceLabel: UILabel!
     // Pop-up components
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var feedbackLabel: UILabel!
@@ -41,6 +43,8 @@ class EventDetailViewController: UIViewController {
         self.title = eventVM.getTitle()
         self.popUpView.isHidden = true
         self.eventImageView.image = eventVM.getImage()
+        self.eventPriceLabel.text = eventVM.getPrice()
+        self.eventDateLabel.text = eventVM.getDate()
         self.eventDescriptionTextView.text = eventVM.getDescription()
         
         eventCheckinButton.rx.tap.bind {
@@ -50,9 +54,17 @@ class EventDetailViewController: UIViewController {
         }.disposed(by: disposeBag)
         
         eventShareButton.rx.tap.bind {
-             DispatchQueue.main.async {
-                self.view.makeToast("Compartilhe bons eventos.", duration: 2.0, position: .center)
-            }
+            
+            /*
+             Não pude testar adequadamente por não possuir um device real comigo.
+             */
+
+            let objectsToShare: [Any] = [self.eventVM.getTitle(), self.eventVM.getDescription(),self.eventVM.getPrice(),self.eventVM.getDate(), self.eventVM.getImage()]
+                   let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            activityVC.popoverPresentationController?.sourceView = self.eventShareButton
+                   self.present(activityVC, animated: true, completion: nil)
+               
         }.disposed(by: disposeBag)
         
         okButton.rx.tap.bind {

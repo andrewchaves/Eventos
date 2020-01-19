@@ -22,9 +22,7 @@ class EventsViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        eventsTableView
-        .rx.setDelegate(self)
-        .disposed(by: disposeBag)
+        eventsTableView.rx.setDelegate(self).disposed(by: disposeBag)
         loadEvents()
     }
     
