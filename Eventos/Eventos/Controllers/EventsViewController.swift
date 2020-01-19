@@ -19,7 +19,7 @@ class EventsViewController: UIViewController, UITableViewDelegate {
     let disposeBag = DisposeBag()
     private var eventsListVM: BehaviorRelay<[EventViewModel]> = BehaviorRelay(value: [])
     private var selectedEventVM: EventViewModel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         eventsTableView.rx.setDelegate(self).disposed(by: disposeBag)
