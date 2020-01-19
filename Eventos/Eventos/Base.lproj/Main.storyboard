@@ -187,12 +187,6 @@
                                             <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prrencha seus dados:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5A-Bo-fE6">
-                                        <rect key="frame" x="20" y="20" width="166" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5T-aP-Jxk">
                                         <rect key="frame" x="20" y="167" width="132.5" height="45"/>
                                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -205,13 +199,18 @@
                                             <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prrencha seus dados:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5A-Bo-fE6">
+                                        <rect key="frame" x="20" y="20" width="291" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="sAU-jv-YVI" secondAttribute="trailing" constant="20" id="2MX-Jf-3xg"/>
                                     <constraint firstItem="ZSQ-7P-BYd" firstAttribute="centerX" secondItem="TAs-9V-tOO" secondAttribute="centerX" id="38q-lN-iKz"/>
                                     <constraint firstItem="a5T-aP-Jxk" firstAttribute="top" secondItem="Sld-6h-osZ" secondAttribute="bottom" constant="20" id="ATm-mQ-nmW"/>
-                                    <constraint firstItem="Z5A-Bo-fE6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TAs-9V-tOO" secondAttribute="leading" symbolic="YES" id="CbM-wI-MAN"/>
                                     <constraint firstItem="Sld-6h-osZ" firstAttribute="width" secondItem="TAs-9V-tOO" secondAttribute="width" multiplier="0.85" id="EIx-hJ-SOn"/>
                                     <constraint firstItem="sAU-jv-YVI" firstAttribute="top" secondItem="Sld-6h-osZ" secondAttribute="bottom" constant="20" id="GMh-zy-vSq"/>
                                     <constraint firstItem="sAU-jv-YVI" firstAttribute="width" secondItem="TAs-9V-tOO" secondAttribute="width" multiplier="0.4" id="HUJ-No-sa0"/>
@@ -219,11 +218,12 @@
                                     <constraint firstItem="Sld-6h-osZ" firstAttribute="top" secondItem="ZSQ-7P-BYd" secondAttribute="bottom" constant="8" id="LKG-n8-k46"/>
                                     <constraint firstItem="Sld-6h-osZ" firstAttribute="centerX" secondItem="TAs-9V-tOO" secondAttribute="centerX" id="T2v-Tn-0P5"/>
                                     <constraint firstItem="a5T-aP-Jxk" firstAttribute="leading" secondItem="TAs-9V-tOO" secondAttribute="leading" constant="20" id="Vgm-p4-2uV"/>
+                                    <constraint firstItem="Z5A-Bo-fE6" firstAttribute="leading" secondItem="TAs-9V-tOO" secondAttribute="leading" constant="20" id="XFB-fW-hGT"/>
                                     <constraint firstItem="sAU-jv-YVI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a5T-aP-Jxk" secondAttribute="trailing" constant="8" symbolic="YES" id="Y3t-TF-fKD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z5A-Bo-fE6" secondAttribute="trailing" constant="20" id="YQR-o0-hhw"/>
                                     <constraint firstItem="a5T-aP-Jxk" firstAttribute="width" secondItem="TAs-9V-tOO" secondAttribute="width" multiplier="0.4" id="bhf-tn-wfa"/>
                                     <constraint firstItem="ZSQ-7P-BYd" firstAttribute="width" secondItem="TAs-9V-tOO" secondAttribute="width" multiplier="0.85" id="h1c-3w-pPz"/>
                                     <constraint firstItem="ZSQ-7P-BYd" firstAttribute="top" secondItem="Z5A-Bo-fE6" secondAttribute="bottom" constant="8" id="h8o-ch-AGJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="Z5A-Bo-fE6" secondAttribute="trailing" constant="145" id="oRf-Fj-6E3"/>
                                 </constraints>
                             </view>
                         </subviews>

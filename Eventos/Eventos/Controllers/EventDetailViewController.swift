@@ -87,6 +87,12 @@ class EventDetailViewController: UIViewController {
             let name = self.nameTextField.text!
             let email = self.eMailTextField.text!
             
+            if !email.my_isValidEmail() {
+                self.feedbackLabel.text = "Insira um e-mail válido!"
+                self.feedbackLabel.textColor = UIColor.red
+                return
+            }
+            
             WebService().checkIn(name: name, email: email, eventId: self.eventVM.getId()) { result in
 
                switch result {

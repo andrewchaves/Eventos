@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		170CA7346E0DAA4DF3AEEF1E /* Pods_EventosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CD76363ADFCE717E1EE627 /* Pods_EventosTests.framework */; };
 		4A2189A423D376800024CCBA /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2189A323D376800024CCBA /* EventDetailViewController.swift */; };
+		4A3CE07623D4B22C00E34126 /* String+EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CE07523D4B22C00E34126 /* String+EmailValidation.swift */; };
 		4A6BDDC823D20FB60038AC3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDC723D20FB60038AC3A /* AppDelegate.swift */; };
 		4A6BDDCA23D20FB60038AC3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BDDC923D20FB60038AC3A /* SceneDelegate.swift */; };
 		4A6BDDCF23D20FB60038AC3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6BDDCD23D20FB60038AC3A /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		222E86C1B0FE78BD55BF337A /* Pods-Eventos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos.release.xcconfig"; path = "Target Support Files/Pods-Eventos/Pods-Eventos.release.xcconfig"; sourceTree = "<group>"; };
 		4A2189A323D376800024CCBA /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		4A3CE07523D4B22C00E34126 /* String+EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EmailValidation.swift"; sourceTree = "<group>"; };
 		4A6BDDC423D20FB60038AC3A /* Eventos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6BDDC723D20FB60038AC3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A6BDDC923D20FB60038AC3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4A3CE07423D4B21200E34126 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CE07523D4B22C00E34126 /* String+EmailValidation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4A6BDDBB23D20FB60038AC3A = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 		4A6BDDC623D20FB60038AC3A /* Eventos */ = {
 			isa = PBXGroup;
 			children = (
+				4A3CE07423D4B21200E34126 /* Extensions */,
 				4A6BDE0323D23BD70038AC3A /* Views */,
 				4A6BDE0023D229480038AC3A /* View Models */,
 				4A6BDDFD23D218320038AC3A /* Models */,
@@ -465,6 +476,7 @@
 				4A6BDDC823D20FB60038AC3A /* AppDelegate.swift in Sources */,
 				4A6BDE0223D22A9B0038AC3A /* EventViewModel.swift in Sources */,
 				4A6BDDCA23D20FB60038AC3A /* SceneDelegate.swift in Sources */,
+				4A3CE07623D4B22C00E34126 /* String+EmailValidation.swift in Sources */,
 				4A6BDDFC23D215280038AC3A /* WebService.swift in Sources */,
 				4A6BDE0523D23BF70038AC3A /* EventTableViewCell.swift in Sources */,
 				4A6BDDFA23D2147F0038AC3A /* EventsViewController.swift in Sources */,
