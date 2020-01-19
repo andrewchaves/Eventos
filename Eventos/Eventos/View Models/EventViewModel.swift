@@ -27,12 +27,12 @@ extension EventViewModel {
         return event.description
     }
     
-    func getPrice() -> String? {
+    func getPrice() -> String {
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = Locale(identifier: "pt_BR")
-        return formatter.string(from: NSNumber(value: event.price))
+        return formatter.string(from: NSNumber(value: event.price)) ?? "00/00/00"
          
     }
     
